@@ -5,6 +5,8 @@ import Inicio from '../modules/residente/pages/InicioRes.jsx';
 import InfoPersonalRes from '../modules/residente/pages/InfoPersonalRes.jsx';
 import ReservasRes from '../modules/residente/pages/ReservasRes.jsx';
 import SolicitudVisitantes from '../modules/residente/pages/SolicitudVisitantes.jsx';
+import ApartarEspacio from '../modules/residente/pages/ApartarEspacio.jsx';
+import MisReservas from '../modules/residente/pages/MisReservas.jsx';
 import RutaRestringida from "../components/rutaRestringida";
 
 export default function AppRouter() {
@@ -14,7 +16,7 @@ export default function AppRouter() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Login />} />
-
+          {/*Residente*/}
           <Route path="/residente" element=
           {
             <RutaRestringida 
@@ -39,6 +41,20 @@ export default function AppRouter() {
           {
             <RutaRestringida
             pagina={<ReservasRes />}
+            ruta={""} />
+          }
+          />
+          <Route path="/residente/Reservas/Apartar" element=
+          {
+            <RutaRestringida
+            pagina={<ApartarEspacio />}
+            ruta={""} />
+          }
+          />
+          <Route path="/residente/Reservas/MisReservas" element=
+          {
+            <RutaRestringida
+            pagina={<MisReservas />}
             ruta={""} />
           }
           />
