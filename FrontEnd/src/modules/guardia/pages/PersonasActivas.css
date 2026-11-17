@@ -1,0 +1,340 @@
+/* ==================================
+   PERSONAS ACTIVAS - EDIFICIO AURORA
+================================== */
+
+.personas-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* ==================================
+   IMAGEN LATERAL
+================================== */
+
+.personas-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.personas-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================================
+   CONTENIDO PRINCIPAL
+================================== */
+
+.personas-contenido {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 5% 70px;
+    box-sizing: border-box;
+}
+
+/* ==================================
+   BOTÓN VOLVER
+================================== */
+
+.personas-contenido .personas-volver {
+    position: absolute;
+    top: 45px;
+    left: 7%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.personas-contenido .personas-volver:hover {
+    background: transparent;
+    color: #a16ad2;
+}
+
+/* ==================================
+   ENCABEZADO
+================================== */
+
+.personas-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.personas-icono {
+    width: 48px;
+    height: 48px;
+    color: #a16ad2;
+    margin-bottom: 15px;
+}
+
+.personas-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.personas-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.personas-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+.personas-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b7a4cc;
+    margin-top: 25px;
+}
+
+/* ==================================
+   PANEL PRINCIPAL
+================================== */
+
+.personas-panel {
+    width: 100%;
+    margin-top: 45px;
+}
+
+/* ==================================
+   ESTADO SIN PERSONAS ACTIVAS
+================================== */
+
+.personas-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 230px;
+    padding: 35px 25px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.personas-estado-icono {
+    width: 52px;
+    height: 52px;
+    color: #a16ad2;
+}
+
+.personas-estado h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #e5c6fa;
+    margin: 5px 0;
+}
+
+.personas-estado p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b7a4cc;
+    margin: 0;
+}
+
+/* ==================================
+   TABLA DE PERSONAS ACTIVAS
+================================== */
+
+.personas-tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.personas-tabla {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-align: left;
+}
+
+.personas-tabla thead {
+    background-color: #301b49;
+}
+
+.personas-tabla th {
+    padding: 18px 15px;
+    color: #e5c6fa;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid #60428a;
+}
+
+.personas-tabla td {
+    padding: 17px 15px;
+    color: #dedbe5;
+    border-bottom: 1px solid rgba(96, 66, 138, 0.45);
+    vertical-align: middle;
+}
+
+.personas-tabla tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.personas-tabla tbody tr:hover {
+    background-color: rgba(161, 106, 210, 0.1);
+}
+
+.personas-tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==================================
+   BOTÓN REGISTRAR SALIDA
+================================== */
+
+.personas-tabla .personas-salida {
+    padding: 10px 16px;
+    min-width: 130px;
+
+    background: linear-gradient(135deg, #58318c, #7d4ab0);
+    border: 1px solid #a16ad2;
+    border-radius: 9px;
+
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.personas-tabla .personas-salida:hover {
+    background: linear-gradient(135deg, #7043a3, #965ac7);
+    transform: translateY(-2px);
+}
+
+/* ==================================
+   BARRA DE DESPLAZAMIENTO
+================================== */
+
+.personas-tabla-contenedor::-webkit-scrollbar {
+    height: 8px;
+}
+
+.personas-tabla-contenedor::-webkit-scrollbar-track {
+    background: #10091f;
+    border-radius: 10px;
+}
+
+.personas-tabla-contenedor::-webkit-scrollbar-thumb {
+    background: #60428a;
+    border-radius: 10px;
+}
+
+.personas-tabla-contenedor::-webkit-scrollbar-thumb:hover {
+    background: #a16ad2;
+}
+
+/* ==================================
+   RESPONSIVE - TABLET
+================================== */
+
+@media (max-width: 850px) {
+    .personas-container {
+        flex-direction: column;
+    }
+
+    .personas-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .personas-contenido {
+        min-height: auto;
+        padding: 30px 20px 60px;
+    }
+
+    .personas-contenido .personas-volver {
+        top: 25px;
+        left: 20px;
+    }
+
+    .personas-header {
+        margin-top: 65px;
+    }
+
+    .personas-panel {
+        margin-top: 35px;
+    }
+}
+
+/* ==================================
+   RESPONSIVE - MÓVIL
+================================== */
+
+@media (max-width: 480px) {
+    .personas-header h1 {
+        font-size: 28px;
+    }
+
+    .personas-header h2 {
+        font-size: 19px;
+    }
+
+    .personas-header p {
+        font-size: 14px;
+    }
+
+    .personas-estado {
+        padding: 25px 18px;
+    }
+
+    .personas-estado h3 {
+        font-size: 19px;
+    }
+}
