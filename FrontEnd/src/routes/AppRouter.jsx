@@ -10,8 +10,8 @@ import MisReservas from '../modules/residente/pages/MisReservas.jsx';
 import InicioGuar from '../modules/guardia/pages/InicioGuar.jsx';
 import PersonasActivas from '../modules/guardia/pages/PersonasActivas.jsx';
 import Registrar from '../modules/guardia/pages/Registrar.jsx';
-import reTrabajador from '../modules/guardia/pages/reTrabajador.jsx';
-import reVisitante from '../modules/guardia/pages/reVisitante.jsx';
+import ReTrabajador from '../modules/guardia/pages/reTrabajador.jsx';
+import ReVisitante from '../modules/guardia/pages/reVisitante.jsx';
 import RutaRestringida from "../components/rutaRestringida";
 
 export default function AppRouter() {
@@ -86,13 +86,13 @@ export default function AppRouter() {
           <Route path="/guardia/Registrar/RegTrabajador" element=
           {
             <RutaRestringida 
-            pagina={<reTrabajador />}
+            pagina={<ReTrabajador />}
             ruta={""} />
           } />
           <Route path="/guardia/Registrar/RegVisitante" element=
           {
             <RutaRestringida 
-            pagina={<reVisitante />}
+            pagina={<ReVisitante />}
             ruta={""} />
           } />
           <Route path="*" element={<Login />} />
