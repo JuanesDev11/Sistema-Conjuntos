@@ -1,0 +1,318 @@
+/* =========================================
+   LOGIN - EDIFICIO AURORA
+========================================= */
+
+.login-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    overflow: hidden;
+}
+
+/* Imagen del edificio */
+.login-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.login-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.login-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 7%;
+    box-sizing: border-box;
+}
+
+/* Botón volver */
+.login-volver {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-volver:hover {
+    color: #a16ad2;
+}
+
+/* Encabezado */
+.login-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.login-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.login-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.login-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.login-formulario {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.login-formulario label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #dedbe5;
+}
+
+/* Campos de entrada */
+.login-campo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #1c112e;
+    border: 1px solid #60428a;
+    border-radius: 10px;
+    padding: 0 15px;
+    height: 55px;
+}
+
+.login-icono {
+    color: #a16ad2;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.login-campo input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.login-campo input::placeholder {
+    color: #9a8ca9;
+}
+
+.login-campo:focus-within {
+    border-color: #a16ad2;
+}
+
+/* Botón ingresar */
+.login-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 55px;
+    margin-top: 25px;
+    background-color: #aa89ca;
+    border: 2px solid #6416a5;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-boton:hover {
+    background-color: #b99bd5;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   POP-UP DE AURORA
+========================================= */
+
+/* Fondo oscuro y desenfocado */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 0, 12, 0.8);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Ventana emergente */
+.popup-contenido {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 30px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg,
+            #241438,
+            #10091f);
+
+    border: 1px solid #76509e;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+
+    animation: aparecerPopup 0.3s ease-out;
+}
+
+/* Icono de advertencia */
+.popup-icono {
+    width: 55px;
+    height: 55px;
+    color: #d8a0f3;
+    margin-bottom: 15px;
+}
+
+/* Título del pop-up */
+.popup-contenido h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #e5c6fa;
+    margin: 0 0 15px;
+}
+
+/* Mensaje del pop-up */
+.popup-contenido p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d8cbe5;
+    margin: 0 0 25px;
+}
+
+/* Botón Entendido */
+.popup-contenido button {
+    width: 100%;
+    height: 48px;
+    background-color: #aa89ca;
+    color: #ffffff;
+
+    border: 1px solid #6416a5;
+    border-radius: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.popup-contenido button:hover {
+    background-color: #b99bd5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(161, 106, 210, 0.3);
+}
+
+/* Animación de entrada */
+@keyframes aparecerPopup {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE
+========================================= */
+
+/* Tablets y pantallas pequeñas */
+@media (max-width: 850px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .login-contenido {
+        padding: 30px 20px 60px;
+    }
+
+    .login-header {
+        margin-top: 25px;
+    }
+
+    .login-formulario {
+        margin-top: 35px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .popup-contenido {
+        padding: 28px 20px;
+    }
+
+    .popup-contenido h2 {
+        font-size: 20px;
+    }
+
+    .popup-contenido p {
+        font-size: 14px;
+    }
+
+    .login-header h2 {
+        font-size: 22px;
+    }
+}

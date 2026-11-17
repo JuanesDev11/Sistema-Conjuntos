@@ -1,0 +1,199 @@
+/* ==================================
+   PANEL RESIDENTE - AURORA
+================================== */
+
+
+.residente-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.residente-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.residente-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.residente-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 4% 50px;
+    box-sizing: border-box;
+}
+
+
+/* Encabezado */
+.residente-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.residente-icono {
+    width: 48px;
+    height: 48px;
+    color: #a16ad2;
+    margin-bottom: 20px;
+}
+
+.residente-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.residente-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.residente-linea {
+    width: 70%;
+    height: 2px;
+    background-color: #58318c;
+}
+
+.residente-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #b7a4cc;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+/* ==================================
+   BOTONES DEL RESIDENTE
+================================== */
+
+/* Contenedor generado por Buttons.jsx */
+.residente-botones>div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 65px;
+}
+
+/* Cada botón */
+.residente-botones button {
+    width: 230px;
+    min-height: 150px;
+    padding: 20px;
+    background-color: #aa89ca;
+    border: 2px solid #6416a5;
+    border-radius: 18px;
+    color: white;
+    font-family: 'Montagu Slab', serif;
+    font-size: 19px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.residente-botones button:hover {
+    background-color: #b99bd5;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(161, 106, 210, 0.25);
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .residente-contenido {
+        padding: 60px 20px;
+    }
+
+    .residente-botones>div {
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .residente-botones button {
+        width: 200px;
+        min-height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .residente-botones>div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .residente-botones button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .residente-container {
+        flex-direction: column;
+    }
+
+    .residente-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .residente-contenido {
+        padding: 40px 20px 60px;
+    }
+}
+
+
+/* ==================================
+   BOTÓN CERRAR SESIÓN
+================================== */
+
+.residente-cerrar-sesion {
+    align-self: flex-end;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    background-color: transparent;
+    border: 1px solid #a16ad2;
+    border-radius: 10px;
+
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.residente-cerrar-sesion:hover {
+    background-color: #a16ad2;
+    color: #ffffff;
+    transform: translateY(-2px);
+}

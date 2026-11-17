@@ -1,0 +1,162 @@
+/* ==================================
+   RESERVAS - EDIFICIO AURORA
+================================== */
+
+.reservas-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.reservas-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.reservas-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.reservas-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 7% 60px;
+    box-sizing: border-box;
+}
+
+/* Botón volver */
+.reservas-volver {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.reservas-volver:hover {
+    color: #a16ad2;
+}
+
+/* ==================================
+   ENCABEZADO
+================================== */
+
+.reservas-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.reservas-icono {
+    width: 48px;
+    height: 48px;
+    color: #a16ad2;
+    margin-bottom: 15px;
+}
+
+.reservas-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.reservas-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.reservas-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+.reservas-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #b7a4cc;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+/* ==================================
+   BOTONES DE RESERVAS
+================================== */
+
+.reservas-botones {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 75px;
+}
+
+/* Aprovechamos los estilos de Buttons.css */
+.reservas-botones .botones-contenedor {
+    justify-content: center;
+    gap: 35px;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .reservas-container {
+        flex-direction: column;
+    }
+
+    .reservas-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .reservas-contenido {
+        padding: 30px 20px 60px;
+    }
+
+    .reservas-header {
+        margin-top: 25px;
+    }
+
+    .reservas-botones {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reservas-header h2 {
+        font-size: 20px;
+    }
+
+    .reservas-header p {
+        font-size: 14px;
+    }
+
+    .reservas-botones .botones-contenedor {
+        gap: 20px;
+    }
+}

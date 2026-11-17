@@ -1,0 +1,165 @@
+/* ==================================
+   INICIO GUARDIA - AURORA
+================================== */
+
+.guardia-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.guardia-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.guardia-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.guardia-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 4% 50px;
+    box-sizing: border-box;
+}
+
+/* Cerrar sesión */
+.guardia-cerrar-sesion {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid #60428a;
+    border-radius: 10px;
+
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.guardia-cerrar-sesion:hover {
+    background-color: #241438;
+    border-color: #a16ad2;
+    color: #ffffff;
+}
+
+/* ==================================
+   ENCABEZADO
+================================== */
+
+.guardia-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.guardia-icono {
+    width: 52px;
+    height: 52px;
+    color: #a16ad2;
+    margin-bottom: 20px;
+}
+
+.guardia-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.guardia-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.guardia-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+.guardia-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #b7a4cc;
+    max-width: 620px;
+    margin: 25px auto 0;
+}
+
+/* ==================================
+   BOTONES
+================================== */
+
+.guardia-botones {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.guardia-botones .botones-contenedor {
+    justify-content: center;
+    gap: 25px;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .guardia-container {
+        flex-direction: column;
+    }
+
+    .guardia-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .guardia-contenido {
+        padding: 30px 20px 60px;
+    }
+
+    .guardia-header {
+        margin-top: 35px;
+    }
+
+    .guardia-botones {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guardia-header h2 {
+        font-size: 20px;
+    }
+
+    .guardia-header p {
+        font-size: 14px;
+    }
+}

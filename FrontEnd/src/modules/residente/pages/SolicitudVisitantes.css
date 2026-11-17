@@ -1,0 +1,302 @@
+/* ==================================
+   SOLICITUDES DE VISITAS - AURORA
+================================== */
+
+.solicitudes-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.solicitudes-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.solicitudes-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido */
+.solicitudes-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 7% 60px;
+    box-sizing: border-box;
+}
+
+/* Botón volver */
+.solicitudes-volver {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.solicitudes-volver:hover {
+    color: #a16ad2;
+}
+
+/* Encabezado */
+.solicitudes-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.solicitudes-icono {
+    width: 48px;
+    height: 48px;
+    color: #a16ad2;
+    margin-bottom: 15px;
+}
+
+.solicitudes-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.solicitudes-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.solicitudes-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+.solicitudes-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #b7a4cc;
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+/* Panel principal */
+.solicitudes-panel {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 45px;
+}
+
+/* ==================================
+   ESTADO SIN SOLICITUDES
+================================== */
+
+.solicitudes-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 35px;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.solicitudes-vacio-icono {
+    width: 65px;
+    height: 65px;
+    color: #a16ad2;
+    margin-bottom: 20px;
+}
+
+.solicitudes-vacio h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #e5c6fa;
+    margin: 0 0 15px;
+}
+
+.solicitudes-vacio p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #b7a4cc;
+    margin: 0;
+}
+
+/* ==================================
+   TARJETAS DE SOLICITUDES
+================================== */
+
+.solicitudes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.solicitud-tarjeta {
+    padding: 25px;
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 18px;
+}
+
+.solicitud-persona {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.solicitud-persona-icono {
+    width: 42px;
+    height: 42px;
+    color: #a16ad2;
+    flex-shrink: 0;
+}
+
+.solicitud-persona h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 8px;
+}
+
+.solicitud-persona p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #b7a4cc;
+    margin: 0;
+}
+
+/* Botones de acciones */
+.solicitud-acciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.solicitud-acciones button {
+    flex: 1;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Aceptar */
+.solicitud-aceptar {
+    background-color: #aa89ca;
+    border: 1px solid #6416a5;
+    color: #ffffff;
+}
+
+.solicitud-aceptar:hover:not(:disabled) {
+    background-color: #b99bd5;
+    transform: translateY(-2px);
+}
+
+/* Rechazar */
+.solicitud-rechazar {
+    background-color: transparent;
+    border: 1px solid #a16ad2;
+    color: #dedbe5;
+}
+
+.solicitud-rechazar:hover:not(:disabled) {
+    background-color: #43285d;
+    transform: translateY(-2px);
+}
+
+.solicitud-acciones button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estados */
+.solicitudes-error {
+    color: #f3a6b5;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.solicitudes-cargando {
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .solicitudes-container {
+        flex-direction: column;
+    }
+
+    .solicitudes-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .solicitudes-contenido {
+        padding: 30px 20px 60px;
+    }
+
+    .solicitudes-panel {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .solicitudes-vacio {
+        padding: 35px 20px;
+    }
+
+    .solicitudes-vacio h3 {
+        font-size: 19px;
+    }
+
+    .solicitud-tarjeta {
+        padding: 20px;
+    }
+
+    .solicitud-acciones {
+        flex-direction: column;
+    }
+
+    .solicitudes-header h2 {
+        font-size: 19px;
+    }
+}
