@@ -10,8 +10,8 @@ import MisReservas from '../modules/residente/pages/MisReservas.jsx';
 import InicioGuar from '../modules/guardia/pages/InicioGuar.jsx';
 import PersonasActivas from '../modules/guardia/pages/PersonasActivas.jsx';
 import Registrar from '../modules/guardia/pages/Registrar.jsx';
-import ReTrabajador from '../modules/guardia/pages/reTrabajador.jsx';
-import ReVisitante from '../modules/guardia/pages/reVisitante.jsx';
+import ReTrabajador from '../modules/guardia/pages/ReTrabajador.jsx';
+import ReVisitante from '../modules/guardia/pages/ReVisitante.jsx';
 import RutaRestringida from "../components/rutaRestringida";
 
 export default function AppRouter() {

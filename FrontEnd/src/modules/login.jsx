@@ -7,7 +7,7 @@ function Login() {
   const navigate = useNavigate();
 
   const controladorLogin = async () => {
-    if(cedula.length === 0 || password.length==0){
+    if(!cedula.trim() || !password.trim()){
       alert("Completa todos los datos");
       return;
     }
