@@ -1,0 +1,67 @@
+/* Contenedor de botones */
+.botones-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Contenedor individual */
+.botones-item {
+    display: flex;
+}
+
+/* Botones de Aurora */
+.boton-aurora {
+    width: 230px;
+    min-height: 150px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    background-color: #aa89ca;
+    border: 2px solid #6416a5;
+    border-radius: 18px;
+
+    color: #ffffff;
+    font-family: 'Montagu Slab', serif;
+    font-size: 18px;
+    text-align: center;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Iconos */
+.boton-aurora-icono {
+    width: 38px;
+    height: 38px;
+    color: #ffffff;
+}
+
+/* Efecto hover */
+.boton-aurora:hover {
+    background-color: #b99bd5;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(161, 106, 210, 0.25);
+}
+
+/* Adaptación a celulares */
+@media (max-width: 480px) {
+    .botones-contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .boton-aurora {
+        width: 260px;
+        min-height: 130px;
+    }
+}

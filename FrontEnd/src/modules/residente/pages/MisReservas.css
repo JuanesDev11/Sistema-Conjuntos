@@ -1,0 +1,263 @@
+/* ==================================
+   MIS RESERVAS - EDIFICIO AURORA
+================================== */
+
+.misreservas-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.misreservas-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.misreservas-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.misreservas-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 7% 60px;
+    box-sizing: border-box;
+}
+
+/* Botón volver */
+.misreservas-volver {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.misreservas-volver:hover {
+    color: #a16ad2;
+}
+
+/* ==================================
+   ENCABEZADO
+================================== */
+
+.misreservas-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.misreservas-icono {
+    width: 48px;
+    height: 48px;
+    color: #a16ad2;
+    margin-bottom: 15px;
+}
+
+.misreservas-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.misreservas-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.misreservas-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+.misreservas-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b7a4cc;
+    margin-top: 25px;
+}
+
+/* ==================================
+   PANEL PRINCIPAL
+================================== */
+
+.misreservas-panel {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 45px;
+}
+
+/* Estado sin reservas */
+.misreservas-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 230px;
+    padding: 35px 25px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.misreservas-estado-icono {
+    width: 52px;
+    height: 52px;
+    color: #a16ad2;
+}
+
+.misreservas-estado h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #e5c6fa;
+    margin: 5px 0;
+}
+
+.misreservas-estado p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b7a4cc;
+    margin: 0;
+}
+
+/* ==================================
+   TARJETAS DE RESERVAS
+================================== */
+
+.misreservas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.misreservas-tarjeta {
+    padding: 28px;
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.2s ease;
+}
+
+.misreservas-tarjeta:hover {
+    border-color: #a16ad2;
+}
+
+.misreservas-tarjeta-titulo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #a16ad2;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #60428a;
+}
+
+.misreservas-tarjeta-titulo h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #e5c6fa;
+    margin: 0;
+}
+
+.misreservas-detalles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 22px;
+}
+
+.misreservas-detalle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #a16ad2;
+}
+
+.misreservas-detalle div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.misreservas-detalle span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #b7a4cc;
+}
+
+.misreservas-detalle strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .misreservas-container {
+        flex-direction: column;
+    }
+
+    .misreservas-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .misreservas-contenido {
+        padding: 30px 20px 60px;
+    }
+
+    .misreservas-header {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .misreservas-tarjeta {
+        padding: 22px 18px;
+    }
+
+    .misreservas-detalles {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .misreservas-header h2 {
+        font-size: 19px;
+    }
+}

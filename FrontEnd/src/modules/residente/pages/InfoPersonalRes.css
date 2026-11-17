@@ -1,0 +1,193 @@
+/* ==================================
+   INFORMACIÓN PERSONAL - AURORA
+================================== */
+
+.info-residente-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.info-residente-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.info-residente-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.info-residente-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 7% 60px;
+    box-sizing: border-box;
+}
+
+/* Botón volver */
+.info-residente-volver {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.info-residente-volver:hover {
+    color: #a16ad2;
+}
+
+/* Encabezado */
+.info-residente-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.info-residente-icono {
+    width: 45px;
+    height: 45px;
+    color: #a16ad2;
+    margin-bottom: 15px;
+}
+
+.info-residente-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.info-residente-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.info-residente-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+/* Tarjeta de información */
+.info-residente-tarjeta {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 45px;
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Cada campo */
+.info-residente-campo {
+    margin-bottom: 22px;
+}
+
+.info-residente-campo:last-child {
+    margin-bottom: 0;
+}
+
+.info-residente-campo label {
+    display: block;
+    margin-bottom: 10px;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+/* Valor recibido del backend */
+.info-residente-valor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 52px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+
+    background-color: #1c112e;
+    border: 1px solid #60428a;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.info-residente-valor svg {
+    color: #a16ad2;
+    flex-shrink: 0;
+}
+
+/* Estados de carga y error */
+.info-residente-estado {
+    color: #dedbe5;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info-residente-error {
+    color: #f3a6b5;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .info-residente-container {
+        flex-direction: column;
+    }
+
+    .info-residente-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .info-residente-contenido {
+        padding: 30px 20px 60px;
+    }
+
+    .info-residente-tarjeta {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-residente-tarjeta {
+        padding: 25px 18px;
+    }
+
+    .info-residente-header h2 {
+        font-size: 19px;
+    }
+}

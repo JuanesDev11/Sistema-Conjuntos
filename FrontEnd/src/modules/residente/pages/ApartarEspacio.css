@@ -1,0 +1,343 @@
+/* ==================================
+   APARTAR ESPACIO - AURORA
+================================== */
+
+.apartar-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #060417;
+    box-sizing: border-box;
+}
+
+/* Imagen lateral */
+.apartar-imagen {
+    width: 23%;
+    min-height: 100vh;
+    flex-shrink: 0;
+}
+
+.apartar-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido principal */
+.apartar-contenido {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 7% 60px;
+    box-sizing: border-box;
+}
+
+/* Botón volver */
+.apartar-volver {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.apartar-volver:hover {
+    color: #a16ad2;
+}
+
+/* ==================================
+   ENCABEZADO
+================================== */
+
+.apartar-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.apartar-icono {
+    width: 48px;
+    height: 48px;
+    color: #a16ad2;
+    margin-bottom: 15px;
+}
+
+.apartar-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 45px);
+    font-weight: 400;
+    color: #a16ad2;
+    margin: 0;
+}
+
+.apartar-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #dedbe5;
+    margin: 15px 0 25px;
+}
+
+.apartar-linea {
+    width: 80%;
+    height: 2px;
+    background-color: #58318c;
+    margin: auto;
+}
+
+.apartar-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #b7a4cc;
+    margin-top: 25px;
+}
+
+/* ==================================
+   FORMULARIO
+================================== */
+
+.apartar-formulario {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #60428a;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.apartar-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.apartar-campo label {
+    color: #dedbe5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.apartar-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 55px;
+    padding: 0 15px;
+
+    background-color: #1c112e;
+    border: 1px solid #60428a;
+    border-radius: 10px;
+}
+
+.apartar-input:focus-within {
+    border-color: #a16ad2;
+}
+
+.apartar-input-icono {
+    width: 22px;
+    height: 22px;
+    color: #a16ad2;
+    flex-shrink: 0;
+}
+
+.apartar-input select,
+.apartar-input input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: 53px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color-scheme: dark;
+}
+
+.apartar-input select option {
+    background-color: #241438;
+    color: #ffffff;
+}
+
+/* Botón guardar */
+.apartar-guardar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 55px;
+    margin-top: 10px;
+
+    background-color: #aa89ca;
+    border: 2px solid #6416a5;
+    border-radius: 12px;
+
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.apartar-guardar:hover:not(:disabled) {
+    background-color: #b99bd5;
+    transform: translateY(-3px);
+}
+
+.apartar-guardar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==================================
+   VENTANA EMERGENTE
+================================== */
+
+.apartar-popup-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: rgba(3, 0, 12, 0.8);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.apartar-popup {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 30px;
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg, #241438, #10091f);
+    border: 1px solid #76509e;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    animation: aparecerReservaPopup 0.3s ease-out;
+}
+
+.apartar-popup-exito,
+.apartar-popup-error-icono {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.apartar-popup-exito {
+    color: #a5dfbd;
+}
+
+.apartar-popup-error-icono {
+    color: #d8a0f3;
+}
+
+.apartar-popup h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #e5c6fa;
+    margin: 0 0 15px;
+}
+
+.apartar-popup p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d8cbe5;
+    margin: 0 0 25px;
+}
+
+.apartar-popup button {
+    width: 100%;
+    height: 48px;
+    background-color: #aa89ca;
+    color: #ffffff;
+    border: 1px solid #6416a5;
+    border-radius: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.apartar-popup button:hover {
+    background-color: #b99bd5;
+}
+
+@keyframes aparecerReservaPopup {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 850px) {
+    .apartar-container {
+        flex-direction: column;
+    }
+
+    .apartar-imagen {
+        width: 100%;
+        height: 180px;
+        min-height: 0;
+    }
+
+    .apartar-contenido {
+        padding: 30px 20px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .apartar-formulario {
+        padding: 25px 18px;
+    }
+
+    .apartar-header h2 {
+        font-size: 19px;
+    }
+
+    .apartar-popup {
+        padding: 28px 20px;
+    }
+}
